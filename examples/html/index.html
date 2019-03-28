@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Analytics Test</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+    <script>
+    (function(w, d, s, g, r, a, m) {
+        w['kiplytics'] = r;
+        w[r] = w[r] || function() {
+            (w[r].q = w[r].q || []).push(arguments)
+        }, w[r].l = 1 * new Date();
+        if (navigator.doNotTrack == 1)
+            return;
+        a = d.createElement(s),
+        m = d.getElementsByTagName(s)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '/js/analytics.js', 'kip');
+
+    kip('create', 'foo', 'auto');
+    kip('send', 'pageview');
+    setInterval(function(){kip("foo","bar");}, 1000);
+    </script>
+</head>
+
+<body>
+    <h1>Hi!</h1>
+</body>
+</html>
