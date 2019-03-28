@@ -2,16 +2,45 @@
     console.log("Hi from analytics!");
     console.log(window.kip.q);
     var kip = window.kip;
-    var queue = kip.q;
+    var queue = kip.q.map(processEvent).filter(function(a){return a!==undefined;});
     
     function processQueue(){
-        events = queue;
+        var events = queue;
         queue = [];
-        sendEvents(queue);
+        console.log(events);
+        sendEvents(events);
+    }
+
+    function processEvent(event){
+        switch(event[0]){
+            case 'create':
+                console.log("creating");
+                return;
+            case 'send':
+                return processSend(event);
+        }
+    }
+
+    function processSend(event){
+        switch(event[1]){
+            case "pageview":
+                console.log("sending page view");
+                return {
+                    p: window.location.pathname,
+                    r: document.referrer,
+                    u: navigator.userAgent,
+                    s: {
+                        w: screen.width,
+                        h: screen.height,
+                        pr: window.devicePixelRatio,
+                    },
+                    t: new Date().getTime(),
+                };
+        }
+
     }
 
     function sendEvents(events){
-        console.log("Sending event...")
         function reqListener () {
             console.log(this.responseText);
           }          
@@ -24,7 +53,10 @@
     }
     
     window.kip = function(){
-        queue.push(arguments);
-        processQueue();
+        var processedEvent = processEvent(arguments);
+        if (processedEvent !== undefined){
+            queue.push(processedEvent);
+            processQueue();
+        }
     }
 }())

@@ -22,10 +22,9 @@
         a.src = g;
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '/js/analytics.js', 'kip');
-
     kip('create', 'foo', 'auto');
     kip('send', 'pageview');
-    setInterval(function(){kip("foo","bar");}, 1000);
+    setInterval(function(){kip("send","pageview");}, 1000);
     </script>
 </head>
 
