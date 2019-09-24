@@ -3,7 +3,7 @@ stages:
   - deploy
 deploy:
   only:
-    - staging
+    - master
     - tags
   stage: deploy
   before_script:
