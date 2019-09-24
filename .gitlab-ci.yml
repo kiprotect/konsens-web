@@ -20,4 +20,4 @@ deploy:
     - npm install
     - CI_APP_VERSION=$CI_COMMIT_TAG APP_VERSION=$CI_COMMIT_SHA npm run-script make
     - echo "Deploying to $DIRECTORY..."
-    - if [ -n "$DIRECTORY" ]; then rsync --progress -r -e "ssh -o StrictHostKeyChecking=no -o identityFile=~/.ssh/id_rsa" dist/* $SERVER_USERNAME@$SERVER_IP:/kiprotect/$DIRECTORY; fi;
+    - if [ -n "$DIRECTORY" ]; then rsync --progress -r -e "ssh -o StrictHostKeyChecking=no -o identityFile=~/.ssh/id_rsa" dist/* $SERVER_USERNAME@$SERVER_IP:/kiprotect_cdn/$DIRECTORY; fi;
