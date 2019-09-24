@@ -4,7 +4,7 @@
   },
   "name": "kiprotect",
   "version": "0.1.0",
-  "description": "KIProtect Client Library - Privacy-Preserving Analytics Library",
+  "description": "KIProtect Client Library - Privacy-Preserving Analytics",
   "main": "src/index.js",
   "directories": {
     "example": "examples"
@@ -16,7 +16,8 @@
   "keywords": [
     "analytics",
     "privacy-preserving",
-    "anonymization"
+    "anonymization",
+    "differential-privacy"
   ],
   "author": "KIProtect GmbH",
   "license": "MIT",
