@@ -10,7 +10,6 @@
 
     <script>
     (function(w, d, s, g, r, a, m) {
-        w['kiplytics'] = r;
         w[r] = w[r] || function() {
             (w[r].q = w[r].q || []).push(arguments)
         }, w[r].l = 1 * new Date();
@@ -21,10 +20,11 @@
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '/js/analytics.js', 'kip');
-    kip('create', 'foo', 'auto');
+    })(window, document, 'script', 'https://cdn.kiprotect.com/kip.js', 'kip');
+    // we create a new instance of KIP analytics
+    kip('create', '995c63b2a29b8245b373be85c0101878');
     kip('send', 'pageview');
-    setInterval(function(){kip("send","pageview");}, 1000);
+    setInterval(function(){console.log("Sending pageview...");kip("send","pageview");}, 1000);
     </script>
 </head>
 

@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "make": "webpack"
+  },
+  "name": "kiprotect",
+  "version": "0.1.0",
+  "description": "KIProtect Client Library - Privacy-Preserving Analytics Library",
+  "main": "src/index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kiprotect/analytics.git"
+  },
+  "keywords": [
+    "analytics",
+    "privacy-preserving",
+    "anonymization"
+  ],
+  "author": "KIProtect GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kiprotect/analytics/issues"
+  },
+  "homepage": "https://github.com/kiprotect/analytics#readme",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
