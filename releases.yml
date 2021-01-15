@@ -13,3 +13,24 @@
   - testing
   - unstable
   version: 0.0.1
+- changelog:
+    de: 'Zweite, interne Testversion von Konsens.
+
+      '
+    en: 'Second internal test version of Konsens.
+
+      '
+  date: '2021-01-15'
+  files:
+  - name: ide.js
+    sha384: U02tTCtdPEVzSbyx7lkCLAGn9N5kF6W9lOnFctPzP1QmKchbXltEZw7JCcu2/ZM2
+  - name: konsens.min.css
+    sha384: eJbaNjg7/hQbWM0kdZo9DxH14yTejY8lyiZfjhNt60MtOYTjz5HTPB3wlEFX1hxZ
+  - name: konsens.css
+    sha384: RqZt7DFaHyJrx/FgaFMb03HWf6MD2oy27oD55p7MrZEdPBfjzQWP/Gr0YQQCQgdm
+  - name: konsens.js
+    sha384: ugFysEWRicn4M6R9QF4WQY27uFvTunboKj1zi+LKByMlmZtRLPoRjERX4ChAtdIA
+  tags:
+  - testing
+  - unstable
+  version: 0.0.2

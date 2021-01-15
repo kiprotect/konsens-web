@@ -49,6 +49,7 @@ let config = {
     },
     entry: {
         konsens: SRC_DIR + '/konsens.ts',
+        ide: SRC_DIR + '/ide.ts',
     },
     output: {
         path: BUILD_DIR,
