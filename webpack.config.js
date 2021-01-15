@@ -23,7 +23,7 @@ let config = {
     context: SRC_DIR,
     resolve: {
         symlinks: false,
-        extensions: ['.jsx', '.js'],
+        extensions: ['.jsx', '.js', '.ts', '.tsx'],
         modules: [SRC_DIR, 'node_modules'],
         alias: {
             react: 'preact/compat',
@@ -48,7 +48,7 @@ let config = {
         ],
     },
     entry: {
-        konsens: SRC_DIR + '/konsens.js',
+        konsens: SRC_DIR + '/konsens.ts',
     },
     output: {
         path: BUILD_DIR,

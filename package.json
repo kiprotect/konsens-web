@@ -41,7 +41,13 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-hot-middleware": "^2.25.0",
-    "yaml-loader": "^0.6.0"
+    "yaml-loader": "^0.6.0",
+    "@babel/preset-typescript": "7.8.3",
+    "@types/classnames": "2.2.9",
+    "@types/react": "16.9.19",
+    "@typescript-eslint/eslint-plugin": "2.17.0",
+    "@typescript-eslint/parser": "2.17.0",
+    "typescript": "3.7.5"
   },
   "files": [
     "*.js",
