@@ -1,8 +1,15 @@
 - changelog:
-  de: |
-    ...
-  en: |
-    ...
+    de: 'Erste, interne Testversion von Konsens.
+
+      '
+    en: 'First internal test version of Konsens.
+
+      '
+  date: '2021-01-15'
+  files:
+  - name: konsens.js
+    sha384: 2K1eyXYLeUQllxxhKl29Vg/JOwU1yyLpcJhLBdqCQZlLS2Fol4noclBlb2N+POIx
+  tags:
+  - testing
+  - unstable
   version: 0.0.1
-  date: '2020-12-07'
-  tags: []
