@@ -95,7 +95,7 @@ if (SEPARATE_CSS) {
     });
     config.plugins.push(
         new MiniCssExtractPlugin({
-            filename: NO_MINIFY_CSS ? 'konsens.css' : 'konsens.min.css',
+            filename: NO_MINIFY_CSS ? '[name].css' : '[name].min.css',
         })
     );
 } else {

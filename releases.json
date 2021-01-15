@@ -46,5 +46,43 @@
       "unstable"
     ],
     "version": "0.0.2"
+  },
+  {
+    "changelog": {
+      "de": "Dritte, interne Testversion von Konsens.\n",
+      "en": "third internal test version of Konsens.\n"
+    },
+    "date": "2021-01-15",
+    "files": [
+      {
+        "name": "ide.js",
+        "sha384": "z/RTxCTrHxeB9le0wIZc5bH/6CT9xhiCupXT0VkQadfcMNHn2Huzn1K1NX1a1fcc"
+      },
+      {
+        "name": "konsens.min.css",
+        "sha384": "eJbaNjg7/hQbWM0kdZo9DxH14yTejY8lyiZfjhNt60MtOYTjz5HTPB3wlEFX1hxZ"
+      },
+      {
+        "name": "ide.min.css",
+        "sha384": "eJbaNjg7/hQbWM0kdZo9DxH14yTejY8lyiZfjhNt60MtOYTjz5HTPB3wlEFX1hxZ"
+      },
+      {
+        "name": "konsens.css",
+        "sha384": "RqZt7DFaHyJrx/FgaFMb03HWf6MD2oy27oD55p7MrZEdPBfjzQWP/Gr0YQQCQgdm"
+      },
+      {
+        "name": "ide.css",
+        "sha384": "RqZt7DFaHyJrx/FgaFMb03HWf6MD2oy27oD55p7MrZEdPBfjzQWP/Gr0YQQCQgdm"
+      },
+      {
+        "name": "konsens.js",
+        "sha384": "i0Ksj6/kjKlo83AEtH/eph/861dk6eVxdSFc11YvYj8wIw7gbkM5e8gjQ4hDPpHF"
+      }
+    ],
+    "tags": [
+      "testing",
+      "unstable"
+    ],
+    "version": "0.0.3"
   }
 ]
