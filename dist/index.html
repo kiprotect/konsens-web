@@ -1,8 +1,344 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="EN-US">
 
-    </head>
-    <body>
-        <h1>It works!</h1>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konsens! A privacy-first event tracking & user experience framework</title>
+    <link rel="stylesheet" href="assets/bulma.min.css" />
+    <link rel="stylesheet" href="assets/prism.css" />
+    <link data-name="googleFonts" data-href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script defer type="application/javascript" src="assets/bulma.js"></script>
+    <script defer type="application/javascript" src="assets/prism.js"></script>
+    <script defer type="application/javascript" src="configs/i18n.js"></script>
+    <script type="application/javascript" src="config.js"></script>
+    <script type="application/javascript" src="konsens.js" data-config="konsensConfig" data-style-prefix="konsens">
+    </script>
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+    <div id="konsens"></div>
+    <section class="hero is-info is-medium is-bold">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            Konsens
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li><a href="#features">Features</a></li>
+                                    <li><a href="#getting-started">Getting Started</a></li>
+                                </ul>
+                                <span class="navbar-item">
+                                    <a class="button is-white is-outlined" href="https://github.com/KIProtect/konsens">
+                                        <span>View on GitHub</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    <u>Konsens!</u> <br /> Privacy-first event tracking & user experience framework.
+                </h1>
+                <h2 class="subtitle">
+                    Konsens is a free &amp; open-source tool that provides
+                    privacy-first event tracking and user experience functionalities. You can use it to learn how your visitors or users interact with your website or app and to improve their experience based on their behavior and interests.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container features">
+            <a name="features"></a>
+            <div class="columns">
+                <div class="column is-4 column-eq">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">
+                                Simple &amp; User-Friendly
+                            </p>
+                            <div class="content">
+                                <p>
+                                    Konsens is simple, unobtrusive and
+                                    optimized for mobile as well as
+                                    desktop browsers. It tries to stay
+                                    out of the way while helping you to
+                                    learn about your users and visitors
+                                    and give them a great experience.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4 column-eq">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">
+                                Open Source
+                            </p>
+                            <div class="content">
+                                <p>
+                                    Konsens is licensed under a permissive
+                                    <strong>BSD-3</strong> license, which
+                                    means that you can use it freely for
+                                    commercial and non-commercial purposes.
+                                    No hidden fees or restrictions.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4 column-eq">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">
+                                Privacy-First
+                            </p>
+                            <div class="content">
+                                <p>
+                                     Konsens keeps all personal data in the web browser, so you don't need to worry about compliance, data subject rights or data theft.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container questions">
+            <h1 class="subtitle"><a name="more-features">More features</a></h1>
+            <div class="columns">
+                <div class="column is-6">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <strong>Privacy by design &amp; default</strong>: Klaro
+                                supports implicit and explicit (our favorite!) modes of consent and can
+                                make sure that no third-party apps are loaded without the
+                                consent of the user.
+                            </li>
+                            <li>
+                                <strong>Smart change detection</strong>: Klaro automatically detects
+                                config changes and will renew consent whenever you add a new app
+                                for which the user didn't give consent yet.
+                            </li>
+                            <li>
+                                Test
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column is-6">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <strong>Mobile-friendly and compatible with all modern browsers</strong>: Klaro
+                                works with all major browsers and is optimized for both desktop
+                                and mobile clients.
+                            </li>
+                            <li>
+                                <strong>Lightweight &amp; fast</strong>: Klaro.js is less than 20 kB
+                                of Javascript (minified + gzipped) and is lightning-fast so that your
+                                users won't notice any difference when using it.
+                            </li>
+                            <li>
+                                <strong>Easy to customize</strong>: Klaro lets you change
+                                the stylesheet to better match your own design and lets you
+                                access its functionality via Javascript as well.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section>
+        <div class="container getting-started">
+            <h1 class="title"><a name="getting-started">Getting Started</a></h1>
+            <div class="content">
+                <p>
+                    Setting up Klaro on your website is easy and usually takes
+                    less than 10 minutes. All you need to do is write a small
+                    config file, load the <code>konsens.js</code> script and make
+                    a few small changes to your third-party/tracking scripts on your page
+                    so that Klaro can manage them.
+                    <strong>Let's get started!</strong>
+                </p>
+            </div>
+            <h2 class="subtitle">Write the config file (no worries, it's easy)</h2>
+            <div class="columns">
+                <div class="column is-6 column-eq">
+                    <pre><code class="language-javascript">window.konsensConfig = {
+    version: '1',
+    events: [
+        {
+            // describe an event that you'd like to capture
+        }
+    ]
+}</code></pre>
+                </div>
+                <div class="column is-6 column-eq">
+                    <div class="content">
+                        <p class="lead">
+                            First, you need to tell Klaro about the third-party
+                            apps and trackers on your site. To do this you write
+                            a simple Javascript config. The easiest way to get started is
+                            by looking at the annotated config file used for this site
+                            and simply modify it according to your needs.
+                            No rocket science involved, promised. There are some
+                            <a href="https://github.com/KIProtect/konsens/blob/master/dist/configs/">more examples</a> on
+                            Github as well.
+                        </p>
+                        <p>
+                            <a href="config.js" class="button is-warning">
+                                View example config
+                            </a>
+                        </p>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                <strong>Stay tuned:</strong> We're working on an
+                                online configuration editor that will allow you
+                                to edit and download a config file without writing
+                                a single line of code!
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="subtitle">Load the config and the script</h2>
+            <div class="columns">
+                <div class="column is-6 column-eq">
+                    <pre><code class="language-javascript">&lt;script defer type="application/javascript"
+        src="config.js"&gt;&lt;/script&gt;
+&lt;script defer data-config="konsensConfig" type="application/javascript"
+        src="https://cdn.kiprotect.com/konsens/v0.1/konsens.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+                <div class="column is-6 column-eq">
+                    <div class="content">
+                        <p>
+                            Finally, include both the config script as well as the Konsens
+                            code on your page. You can defer the loading of the scripts
+                            if you like, just make sure the config is initialized when Konsens loads.
+                        </p>
+                        <p>
+                            If you want to host Konsens yourself, you can download it here.
+                            <div style="display:inline-block">
+                                <a id="versionLink" href="https://cdn.kiprotect.com/konsens/v0.1/konsens.js" download class="button is-warning">
+                                    Download konsens.js
+                                </a>
+                                <div class="select">
+                                    <select onChange="versionLink.href='https://cdn.kiprotect.com/konsens/'+versionSelect.value+'/konsens.js'" id="versionSelect" class="select" name="konsens-version">
+                                    </select>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr />
+
+
+    <section>
+        <div class="container questions">
+            <h1 class="title"><a name="help">Questions?</a></h1>
+            <div class="content">
+                <p>
+                    Do you have questions or problems? Then just head
+                    over to our <a href="https://github.com/KIProtect/konsens">GitHub page</a>
+                    and feel free to open an <a href="https://github.com/KIProtect/konsens/issues">issue</a>.
+                    If you want to contribute to Klaro, feel free to
+                    open a <a href="https://github.com/KIProtect/konsens/pulls">pull request</a>
+                    (but better ask us for advice before you make large changes). You can
+                    also reach us by e-mail at <a href="mailto:konsens@kiprotect.com">konsens@kiprotect.com</a>.
+                    We're looking forward to hear from you!
+                </p>
+                <article class="message is-success">
+                    <div class="message-body">
+                        By the way, Klaro is pronounced [klɛro] and is a colloquial German word that means
+                        "alright" or "got it".
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <section>
+        <div class="container questions">
+            <h1 class="title"><a name="privacy">Privacy Policy</a></h1>
+            <div class="content">
+                <p>
+                    This website is a project by <a href="https://kiprotect.com/company/imprint">KIProtect</a>.
+                </p>
+                <p>
+                    You can reach us at <a href="mailto:privacy@kiprotect.com">privacy@kiprotect.com</a>
+                    if you have any questions regarding this website or
+                    your personal data.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- our (real) Matomo tracking code -->
+    <script type="text/plain" data-type="application/javascript" data-name="matomo">
+        var _paq = _paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//analytics.7scientists.com/";
+                _paq.push(['setTrackerUrl', u+'piwik.php']);
+                _paq.push(['setSiteId', '7']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='application/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+    <noscript>
+        <p><img data-name="matomo" data-src="//analytics.7scientists.com/piwik.php?idsite=7&rec=1" style="border:0;"
+                alt="" /></p>
+    </noscript>
+
+</body>
+
 </html>
