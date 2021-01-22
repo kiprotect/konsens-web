@@ -41,7 +41,7 @@ let config = {
                 use: ['json-loader', 'yaml-loader'],
             },
             {
-                test: /\.jsx?/,
+                test: /\.(?:j|t)sx?/,
                 include: [SRC_DIR],
                 loader: 'babel-loader',
             },
