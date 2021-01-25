@@ -1,5 +1,6 @@
 import Base from './base'
 import { currentScript } from 'utils/compat'
+import KonsensApi from 'utils/api'
 
 function getKonsensId(script){
     const konsensId = script.getAttribute('data-konsens-id')
@@ -23,7 +24,6 @@ function getKonsensApiUrl(script){
 
 export default class Konsens extends Base {
     constructor(config){
-        console.log("Initializing Konsens backend...")
         const script = currentScript('konsens')
         if (config.id === undefined){
             config.id = getKonsensId(script)
@@ -32,6 +32,18 @@ export default class Konsens extends Base {
             config.url = getKonsensApiUrl(script)
         }
         super(config)
-        console.log(config)
+        this.api = new KonsensApi(config.url, config.id, config.opts || {})
+    }
+
+    doSubmit(events){
+        for(const event of events){
+            const attributes = event.at
+            event.at = []
+            for(const [key, value] of Object.entries(attributes)){
+                event.at.push({[key]: value})
+            }
+        }
+        this.api.submitEvents(events)
+        console.log(events)
     }
 }

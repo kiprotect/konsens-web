@@ -6,18 +6,12 @@ export default class Pageview extends Base {
         return 'pageview'
     }
 
-    init(context){
+    init(){
         const href = window.location.href
-        const pageviewEvent = {
-            at: {
-                href: href,
-            },
-            et: this.type,
-        }
-        const events = this.manager.store.get({et: this.type})
+        const events = this.get({et: this.name})
         let found = false
         for(const event of events){
-            if (event.et == this.type){
+            if (event.et == this.name){
                 if (event.at.href == href)
                     found = true
                 else
@@ -27,6 +21,8 @@ export default class Pageview extends Base {
         if (found)
             return
         // seems there isn't a pageview event yet, so we add one...
-        this.manager.store.add(pageviewEvent)
+        const pageviewEvent = this.makeEvent()
+        pageviewEvent.at.href = href        
+        this.submit(pageviewEvent)
     }
 }

@@ -1,13 +1,5 @@
 import Store from './base'
 
-// https://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid
-function uuidv4() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-}
-
 export default class StorageStore extends Store {
 
     constructor(config){
@@ -23,24 +15,21 @@ export default class StorageStore extends Store {
         return JSON.parse(this.storage.getItem(this.storageKey)) || []
     }
 
+    setAttribute(key, value){
+        const attributes = this.getAttributes()
+        if (value === undefined)
+            delete attributes[key]
+        else
+            attributes[key] = value
+        this.storage.setItem(this.storageKey+'-attributes', JSON.stringify(attributes))
+    }
+
     getAttributes(){
-        // returns all currently valid attributes, as extracted from events
-        const attributes = {}
-        for(const event of this.get({})){
-            for(const [k,v] of Object.entries(event.at || {})){
-                attributes[k] = v
-            }
-        }
-        return attributes
+        return JSON.parse(this.storage.getItem(this.storageKey+'-attributes')) || {}
     }
 
     add(event){
         const events = this.get({})
-        // we give the event a unique UUID
-        event.id = uuidv4()
-        // we set the timestamp of the event, if it is not already set
-        if (event.t === undefined)
-            event.t = new Date().getTime()
         events.push(event)
         this.set(events)
     }

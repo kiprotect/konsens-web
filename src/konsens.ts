@@ -2,6 +2,7 @@ import 'scss/main.scss';
 
 import EventManager from './event_manager'
 import EventTypes from './events'
+import AttributeTypes from './attributes'
 import EventStores from './stores'
 import Backends from './backends'
 
@@ -41,7 +42,7 @@ export function initialize(config){
     }
     es = makeEventStore(config)
     be = makeBackend(config)
-    em = new EventManager(config, es, be, EventTypes)
+    em = new EventManager(config, es, be, EventTypes, AttributeTypes)
 }
 
 if (!(window.konsensConfig !== undefined && window.konsensConfig.noAutoLoad))
