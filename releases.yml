@@ -1,4 +1,26 @@
 - changelog:
+    de: Automatisches Laden von Konfiguration, die über den API-Endpunkt empfangen
+      wurde.
+    en: Automatically use configuration received via the API endpoint.
+  date: '2021-01-27'
+  files:
+  - name: ide.js
+    sha384: aqLc4v4B4kY3tvlsO5lSPUIH8+96JhBLkeQCs1ala1YCIiqWK9lMWy7YUwusudOV
+  - name: konsens.min.css
+    sha384: eJbaNjg7/hQbWM0kdZo9DxH14yTejY8lyiZfjhNt60MtOYTjz5HTPB3wlEFX1hxZ
+  - name: ide.min.css
+    sha384: eJbaNjg7/hQbWM0kdZo9DxH14yTejY8lyiZfjhNt60MtOYTjz5HTPB3wlEFX1hxZ
+  - name: konsens.css
+    sha384: RqZt7DFaHyJrx/FgaFMb03HWf6MD2oy27oD55p7MrZEdPBfjzQWP/Gr0YQQCQgdm
+  - name: ide.css
+    sha384: RqZt7DFaHyJrx/FgaFMb03HWf6MD2oy27oD55p7MrZEdPBfjzQWP/Gr0YQQCQgdm
+  - name: konsens.js
+    sha384: MEYtnd/FtJHhMsDIMetmSAfhbpWHgY4Qr8Pmoz39kU8Kblbt8UljdBBY+B53zfMS
+  tags:
+  - testing
+  - unstable
+  version: 0.1.1
+- changelog:
     de: Erste öffentliche Testversion die zwei grundlegende Ereignistypen unterstützt.
     en: First public test version that supports two basic event types.
   date: '2021-01-25'
