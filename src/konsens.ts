@@ -34,11 +34,14 @@ export function makeBackend(config){
 
 export function initialize(config){
     if (config === undefined){
-        if (window.konsensConfig === undefined){
+        if (window.konsensConfig !== undefined)
+            config = window.konsensConfig
+        else if (window.konsensApiConfig !== undefined)
+            config = window.konsensApiConfig
+        if (config === undefined){
             console.error("No config given, aborting...")
             return
         }
-        config = window.konsensConfig
     }
     es = makeEventStore(config)
     be = makeBackend(config)

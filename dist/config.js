@@ -1,5 +1,5 @@
 window.konsensConfig = {
-  attributes: ['user-agent', 'cohort', 'segment', 'language'],
+  attributes: ['>user-agent', 'cohort', 'segment', 'language', '>country'],
   events: [
     // these are elementary default events that we always want to capture
     {
@@ -20,18 +20,20 @@ window.konsensConfig = {
     {
       name: 'recurring-visitor',
       type: 'complex',
-      match: [
-        {
-          $repeat: {
-            min: 2,
-            match: [
-              {
-                type: 'visit',
-              }
-            ]
+      config: {
+        match: [
+          {
+            $repeat: {
+              min: 2,
+              match: [
+                {
+                  type: 'visit',
+                }
+              ]
+            }
           }
-        }
-      ]
-    },
+        ]        
+      }
+    }
   ]
 }
